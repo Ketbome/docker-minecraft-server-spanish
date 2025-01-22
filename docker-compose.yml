@@ -9,17 +9,17 @@ services:
       EULA: "true"
 
       # VANILLA settings
-      #TYPE: VANILLA
-      #VERSION: "1.16.5"
+      TYPE: VANILLA
+      VERSION: "1.16.5"
 
       # FORGE settings
       #TYPE: FORGE
       #VERSION: "1.16.5"
 
       # CURSEFORGE settings
-      TYPE: CURSEFORGE
-      VERSION: "1.16.5"
-      CF_SERVER_MOD: "/modpacks/serverpack9112.zip"
+      #TYPE: CURSEFORGE
+      #VERSION: "1.16.5"
+      #CF_SERVER_MOD: "/modpacks/serverpack9112.zip"
 
       # CURSEFORGE settings (alternative to CF_SERVER_MOD)
       # Allocate from https://console.curseforge.com/ and set in .env file
