@@ -4,7 +4,7 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "25565:25565"
+      - "25566:25565"
     environment:
       EULA: "true"
 
@@ -85,7 +85,7 @@ services:
       - ./mc-data:/srv
       - ./filebrowser-db:/database
     ports:
-      - "25580:80"
+      - "25581:80"
     restart: "no"
 
 volumes:
