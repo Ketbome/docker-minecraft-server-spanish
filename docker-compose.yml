@@ -26,15 +26,15 @@ services:
       MODPACK_PLATFORM: 'AUTO_CURSEFORGE'
       CF_API_KEY: ${CF_API_KEY}
       CF_PAGE_URL: 'https://www.curseforge.com/minecraft/modpacks/nizcos-cobblemon-adventures-2'
-      CF_FORCE_INCLUDE_MODS: "890745"
-      CF_EXCLUDE_MODS: '965556'
+      #CF_FORCE_INCLUDE_MODS: "890745"
+      #CF_EXCLUDE_MODS: '965556'
       #CF_FILENAME_MATCHER: "0.2.34"
       CF_FORCE_SYNCHRONIZE: 'true'
       #CF_FORCE_INCLUDE_MODS: 250419
 
       # Optional: set to the version you want to install
-      INIT_MEMORY: '8G'
-      MAX_MEMORY: '12G'
+      INIT_MEMORY: '6G'
+      MAX_MEMORY: '8G'
       TZ: 'America/Santiago'
       ENABLE_ROLLING_LOGS: "true"
       EXEC_DIRECTLY: "true"
