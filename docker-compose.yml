@@ -23,19 +23,19 @@ services:
 
       # CURSEFORGE settings (alternative to CF_SERVER_MOD)
       # Allocate from https://console.curseforge.com/ and set in .env file
-      MODPACK_PLATFORM: 'AUTO_CURSEFORGE'
+      MODPACK_PLATFORM: "AUTO_CURSEFORGE"
       CF_API_KEY: ${CF_API_KEY}
-      CF_PAGE_URL: 'https://www.curseforge.com/minecraft/modpacks/nizcos-cobblemon-adventures-2'
+      CF_PAGE_URL: "https://www.curseforge.com/minecraft/modpacks/vault-hunters-1-18-2"
       #CF_FORCE_INCLUDE_MODS: "890745"
       #CF_EXCLUDE_MODS: '965556'
       #CF_FILENAME_MATCHER: "0.2.34"
-      CF_FORCE_SYNCHRONIZE: 'true'
+      CF_FORCE_SYNCHRONIZE: "true"
       #CF_FORCE_INCLUDE_MODS: 250419
 
       # Optional: set to the version you want to install
-      INIT_MEMORY: '6G'
-      MAX_MEMORY: '8G'
-      TZ: 'America/Santiago'
+      INIT_MEMORY: "6G"
+      MAX_MEMORY: "8G"
+      TZ: "America/Santiago"
       ENABLE_ROLLING_LOGS: "true"
       EXEC_DIRECTLY: "true"
       STOP_SERVER_ANNOUNCE_DELAY: 60
@@ -64,10 +64,10 @@ services:
   # init container will change ownership to match final UID of mc service, above
   init-filebrowser:
     image: filebrowser/filebrowser
-    entrypoint: 'sh -c'
+    entrypoint: "sh -c"
     command:
       - "chown -R 1000: /database"
-    restart: 'no'
+    restart: "no"
     volumes:
       - ./filebrowser-db:/database
   filebrowser:
