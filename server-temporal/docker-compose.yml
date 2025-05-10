@@ -1,5 +1,5 @@
 services:
-  mc:
+  mc-temporary:
     image: itzg/minecraft-server:latest
     tty: true
     stdin_open: true
@@ -63,7 +63,7 @@ services:
 
   # Since Docker's default volume driver creates volumes owned by root, this
   # init container will change ownership to match final UID of mc service, above
-  init-filebrowser:
+  init-filebrowser-temporary:
     image: filebrowser/filebrowser
     entrypoint: "sh -c"
     command:
@@ -74,7 +74,7 @@ services:
   filebrowser:
     image: filebrowser/filebrowser
     depends_on:
-      init-filebrowser:
+      init-filebrowser-temporary:
         condition: service_completed_successfully
     user: "1000:1000"
     environment:
