@@ -1,6 +1,6 @@
 services:
   mc-temporary:
-    image: itzg/minecraft-server:latest
+    image: itzg/minecraft-server:java17
     tty: true
     stdin_open: true
     ports:
@@ -25,7 +25,7 @@ services:
       # Allocate from https://console.curseforge.com/ and set in .env file
       MODPACK_PLATFORM: "AUTO_CURSEFORGE"
       CF_API_KEY: ${CF_API_KEY}
-      CF_PAGE_URL: "https://www.curseforge.com/minecraft/modpacks/nizcos-cobblemon-adventures-2"
+      CF_PAGE_URL: "https://www.curseforge.com/minecraft/modpacks/vault-hunters-1-18-2"
       #CF_FORCE_INCLUDE_MODS: "890745"
       #CF_EXCLUDE_MODS: '965556'
       #CF_FILENAME_MATCHER: "0.2.34"

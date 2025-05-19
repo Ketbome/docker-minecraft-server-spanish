@@ -1,6 +1,6 @@
 services:
   mc:
-    image: itzg/minecraft-server:latest
+    image: itzg/minecraft-server:java17
     tty: true
     stdin_open: true
     ports:
@@ -18,14 +18,15 @@ services:
 
       # CURSEFORGE settings
       #TYPE: CURSEFORGE
-      #VERSION: "1.16.5"
+      #VERSION: "1.19.2"
       #CF_SERVER_MOD: "/modpacks/serverpack9112.zip"
 
       # CURSEFORGE settings (alternative to CF_SERVER_MOD)
       # Allocate from https://console.curseforge.com/ and set in .env file
       MODPACK_PLATFORM: "AUTO_CURSEFORGE"
       CF_API_KEY: ${CF_API_KEY}
-      CF_PAGE_URL: "https://www.curseforge.com/minecraft/modpacks/vault-hunters-1-18-2"
+      CF_PAGE_URL: "https://www.curseforge.com/minecraft/modpacks/one-block-horror"
+      #CF_SLUG: "1082906"
       #CF_FORCE_INCLUDE_MODS: "890745"
       #CF_EXCLUDE_MODS: '965556'
       #CF_FILENAME_MATCHER: "0.2.34"
@@ -81,7 +82,7 @@ services:
     volumes:
       # Default FB_ROOT is /srv
       # In this example, the left-side needs to be the same as /data volume of mc service
-      - ./mc-data:/srv
+      - ./:/srv
       - ./filebrowser-db:/database
     ports:
       - "25580:80"
